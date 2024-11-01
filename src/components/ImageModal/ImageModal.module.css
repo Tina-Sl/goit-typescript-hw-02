@@ -1,0 +1,51 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161f30e3;
+  z-index: 99;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #dae9f3;
+  max-width: 90vh;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  /* calc(100% - 20px); */
+  object-fit: cover;
+}
+.title {
+  font-size: 1.8rem;
+  color: #000;
+  margin: 10px 0;
+}
