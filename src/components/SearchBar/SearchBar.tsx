@@ -1,13 +1,18 @@
-import { Field, Form, Formik } from "formik";
+import { Field, Form, Formik, FormikValues } from "formik";
+import { FC } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { AiOutlineSearch } from "react-icons/ai";
 import s from "./SearchBar.module.css";
 
-const SearchBar = ({ setQuery }) => {
+type SearchBarProps = {
+  setQuery: (value: string) => void;
+};
+
+const SearchBar: FC<SearchBarProps> = ({ setQuery }) => {
   const initialValues = {
     query: "",
   };
-  const handleSubmit = (values) => {
+  const handleSubmit = (values: FormikValues) => {
     if (!values.query) {
       toast.error("You must enter text to search for images");
       return;

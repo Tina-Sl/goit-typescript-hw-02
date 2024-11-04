@@ -5,7 +5,6 @@ const Loader = () => {
   return (
     <div className={s.container}>
       <MagnifyingGlass
-        className={s.loader}
         visible={true}
         height="100"
         width="100"
@@ -20,3 +19,4 @@ const Loader = () => {
 };
 
 export default Loader;
+// @npmteam2024/nesciunt-tempore-occaecati
