@@ -8,7 +8,7 @@ import ImageGallery from "../ImageGallery/ImageGallery";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "../ImageModal/ImageModal";
-import { Image, DataImages } from "./App.types";
+import { Image, DataImages } from "../../services/types";
 
 function App() {
   const [images, setImages] = useState<Image[]>([]);

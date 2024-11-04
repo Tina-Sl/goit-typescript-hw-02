@@ -1,7 +1,14 @@
 import ImageCard from "../ImageCard/ImageCard";
+import { FC } from "react";
 import s from "./ImageGallery.module.css";
+import { Image } from "../../services/types";
 
-const ImageGallery = ({ images, onImageClick }) => {
+type ImageGalleryProps = {
+  images: Image[];
+  onImageClick: (img: Image) => void;
+};
+
+const ImageGallery: FC<ImageGalleryProps> = ({ images, onImageClick }) => {
   return (
     <ul className={s.imgGallery}>
       {images.map((img) => (
@@ -10,12 +17,7 @@ const ImageGallery = ({ images, onImageClick }) => {
           key={img.id}
           onClick={() => onImageClick(img)}
         >
-          <ImageCard
-            alt={img.alt_description}
-            src={img.urls.small}
-            author={img.user.name}
-            location={img.user.location}
-          />
+          <ImageCard imgItem = {img} />
         </li>
       ))}
     </ul>
